@@ -51,7 +51,7 @@ public final class MainPage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>Admin Home</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <img src=\"3.jpg\" style=\"width: 100%; height:150px\"/>\n");
+      out.write("    <marquee>><img src=\"3.jpg\" style=\"width: 100%; height:150px\"/></marquee>\n");
       out.write("        <table style=\"width: 100%; border-style: solid; background-color: bisque\">\n");
       out.write("            <tr>\n");
       out.write("                <td><a href=\"UserRegisteration.jsp\">User Registration</a></td>\n");

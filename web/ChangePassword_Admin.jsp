@@ -3,24 +3,28 @@
     Created on : Dec 1, 2016, 5:02:47 PM
     Author     : ict
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
+<!DOCTYPE html><html> <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <style>
             input{
-                background-color: bisque;
+                background-color:plum;
                 border-color: black;
             }
             td{
                 text-align: center;
                 text-decoration: blink;
                 text-transform: uppercase;
-                
             }
+                
+body {
+  background-image: url('mera.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
         </style>
     </head>
     <body>
@@ -28,7 +32,7 @@
         <h3>Change Password Admin</h3>
         <form action="ChangePasswordConfirmAdmin.jsp">
         <br><br>
-        <table style="border-style: solid; border-color:blue; background-color: aqua">
+        <table style="border-style: solid; border-color:blue; background-color: red">
             <tr><td>Old Password</td><td><input type="Password" name="oPass"/></td></tr>
             <tr><td>New Password</td><td><input type="Password" name="nPass"></td></tr>
             <tr><td>Confirm Password</td><td><input type="Password" name="cPass"/></td></tr>

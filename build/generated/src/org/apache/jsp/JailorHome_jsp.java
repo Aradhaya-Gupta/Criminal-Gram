@@ -50,13 +50,14 @@ public final class JailorHome_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Jailor Home</title>\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    <body background=\"C:\\Users\\Aradhaya Gupta\\Documents\\NetBeansProjects\\Criminalgram1.0\\build\\web\\city-police-station-department-building-260nw-360832229.jpg\">\n");
       out.write("        <img src=\"3.jpg\" style=\"width: 100%; height:150px\"/>\n");
       out.write("        <table style=\"width: 100%; border-style: solid; background-color: bisque\">\n");
       out.write("            <tr>\n");
-      out.write("                <td><a href=\"Complaint_Jailor.jsp\" target=\"work\">Home</a></td>\n");
-      out.write("                <td><a href=\"ChangePassword_Jailor.jsp\" target=\"work\">Change Password</a></td>\n");
-      out.write("                <td><a href=\"JailorLogin.jsp\" target=\"work\">Sign Out</a></td>\n");
+      out.write("                <td><a href=\"Complaint_Jailor.jsp\" target=\"work\">Check Complaints</a></td>\n");
+      out.write("                <td><a href=\"ChangePassword_Jailor.jsp\">Change Password</a></td>\n");
+      out.write("                <td><a href =\"Criminals.jsp\">Criminals Data</a></td>>\n");
+      out.write("                <td><a href=\"SignOut_Admin.jsp\">Sign Out</a></td>\n");
       out.write("           \n");
       out.write("                \n");
       out.write("            </tr>\n");

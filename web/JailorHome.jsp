@@ -10,13 +10,23 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Jailor Home</title>
+        
+
     </head>
-    <body>
+    <style>
+body {
+  background-image: url('25.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+</style>
+    <body >
         <img src="3.jpg" style="width: 100%; height:150px"/>
-        <table style="width: 100%; border-style: solid; background-color: bisque">
+        <table style="width: 100%; border-style: solid; background-color: darkorange">
             <tr>
                 <td><a href="Complaint_Jailor.jsp" target="work">Check Complaints</a></td>
                 <td><a href="ChangePassword_Jailor.jsp">Change Password</a></td>
+                <td><a href ="Criminals.jsp">Criminals Data</a></td>>
                 <td><a href="SignOut_Admin.jsp">Sign Out</a></td>
            
                 

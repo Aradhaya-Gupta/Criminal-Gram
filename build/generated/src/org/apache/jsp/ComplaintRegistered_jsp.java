@@ -3,20 +3,12 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import javax.xml.ws.Response;
-import java.sql.ResultSet;
-import java.io.*;
-import java.util.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.io.File;
-import org.apache.tomcat.util.http.fileupload.FileItem;
-import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
-import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
+import java.lang.*;
+import java.sql.*;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
-import java.util.List;
 
 public final class ComplaintRegistered_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -59,85 +51,61 @@ public final class ComplaintRegistered_jsp extends org.apache.jasper.runtime.Htt
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
+      out.write("        <title>User Registered</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("       \n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("       \n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        ");
+      out.write("     ");
 
+     String Options="Options";
+     String empty="";
+    String suspect=request.getParameter("suspect");
+    String city=request.getParameter("city");
+    String subject=request.getParameter("subject");
+     String description=request.getParameter("description");
+    String phonenumber=request.getParameter("phonenumber");
+    if(city.equals(Options) ||subject.equals(empty)||description.equals(empty)){
         
-   DiskFileItemFactory fact=new DiskFileItemFactory();
- ServletFileUpload upl=new ServletFileUpload(fact);
-try{
-                 
-List items = upl.parseRequest(request);
- 
-FileItem a,b,c,d,e,f ;
-a=(FileItem)items.get(0);
-b=(FileItem)items.get(1);
-c=(FileItem)items.get(2);
-d=(FileItem)items.get(3);
-e=(FileItem)items.get(4);
-f=(FileItem) items.get(5);
-String pic ,fname ;
-pic = f.getName();
-fname = "C:\\Users\\Aradhaya Gupta\\Documents\\NetBeansProjects\\Criminalgram1.0"+pic ;
-File fl=new File(fname);
-c.write(fl);
-Connection con;
-PreparedStatement pstm;
+           
+      out.write("<center>Please enter all the Fields</center>");
 
-             
-   Class.forName("com.mysql.jdbc.Driver");
-        con= DriverManager.getConnection("jdbc:mysql://localhost:3306/criminalgram", "root","");
-        pstm= con.prepareStatement("INSERT INTO complaint (suspect,subject,description,phonenumber,city,photo)VALUES (?,?,?,?,?,?)");
-        pstm.setString(1,a.getString());
-        pstm.setString(2,c.getString());
-        pstm.setString(3,d.getString());
-        pstm.setString(4,e.getString());
-        pstm.setString(5,b.getString());
-         pstm.setString(6,fname);
+        RequestDispatcher rd=request.getRequestDispatcher("FileComplaint.jsp");
+        rd.include(request,response);
+           }else
+           {
+           
+        Connection cn;
+        PreparedStatement pstm;
+        ResultSet rs;
+        try{
+        Class.forName("com.mysql.jdbc.Driver");
+        cn= DriverManager.getConnection("jdbc:mysql://localhost:3306/criminalgram", "root","");
+        pstm= cn.prepareStatement("INSERT INTO complaint (suspect,subject,description,phonenumber,city)VALUES (?,?,?,?,?)");
+        pstm.setString(1,suspect);
+        pstm.setString(2,subject);
+        pstm.setString(3,description);
+        pstm.setString(4,phonenumber);
+        pstm.setString(5,city);
         int i= pstm.executeUpdate();
+        
+      out.write("<h1>Complaint Filed</h1>");
+
+               }catch(Exception e)
+                                             {
+                   out.println(e.toString());
+               }
+                   
        
-           int  rs = pstm.executeUpdate();
-            
-              if(rs==1)
-                        {
-            
-           out.println("<h1>Complaint Registered</h1>");
-           out.println("<br/><br/><a href=FileComplaint.jsp><button>Back</button></a>");
-                     }
-               con.close();
-                      }catch(Exception e)
-                                                                                          {
-                           out.print(e);
-                       }
-            
-            
+       }
+    
       out.write("\n");
-      out.write("    %>\n");
       out.write("    \n");
       out.write("    </body>\n");
       out.write("</html>\n");

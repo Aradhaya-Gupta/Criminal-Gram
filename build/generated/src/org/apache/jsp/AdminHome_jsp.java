@@ -56,11 +56,14 @@ public final class AdminHome_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <tr>\n");
       out.write("                <td><a href=\"JailorRegistration.jsp\" target=\"work\">Register Jailor</a></td>\n");
       out.write("                <td><a href=\"RemoveJailor.jsp\" target=\"work\">Remove Jailor</a></td>\n");
-      out.write("                <td><a href=\"ChangePassword_Admin.jsp\" target=\"work\">Change Password</a></td>\n");
-      out.write("                <td><a href=\"MainPage.jsp\">Sign Out</td>\n");
+      out.write("                <td><a href=\"ChangePassword_Admin.jsp\">Change Password</a></td>\n");
+      out.write("                <td><a href=\"CriminalsAdmin.jsp\">Criminals information</a></td>>\n");
+      out.write("                <td><a href=\"SignOut_Admin.jsp\">Sign Out</td>\n");
+      out.write("              \n");
       out.write("                \n");
       out.write("            </tr>\n");
       out.write("        </table>\n");
+      out.write("        \n");
       out.write("    <center>    <iframe name=\"work\" style=\"width: 500px; height: 500px; border-style: hidden\"></iframe>\n");
       out.write("        </center> \n");
       out.write("    </body>\n");

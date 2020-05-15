@@ -19,6 +19,7 @@
         <%
         String uid= request.getParameter("aUid");
         String pass= request.getParameter("pass");
+        String city=request.getParameter("city");
         Connection cn;
         PreparedStatement pstm;
         ResultSet rs;
@@ -33,6 +34,7 @@
        
         session.setAttribute("aUid", uid);
         session.setAttribute("pass", pass);
+        session.setAttribute("city",city);
          response.sendRedirect("JailorHome.jsp");
         }
         else

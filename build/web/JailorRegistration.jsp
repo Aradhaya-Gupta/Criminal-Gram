@@ -10,6 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Jailor Registration</title>
+        <style>
+body {
+  background-image: url('bharat.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+</style>
+
     </head>
     <body><center>
         <h2>Jailor Registration</h2>

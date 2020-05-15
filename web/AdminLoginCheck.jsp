@@ -4,18 +4,12 @@
     Author     : ict
 --%>
 <%@page import="java.lang.*"%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
+<html> <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Login Check</title>
-    </head>
-    <body>
+    </head> <body>
         <%
         String uid= request.getParameter("aUid");
         String pass= request.getParameter("pass");
@@ -30,21 +24,15 @@
         pstm.setString(2, pass);
         rs= pstm.executeQuery();
         if(rs.next()){
-    
         session.setAttribute("aUid", uid);
         session.setAttribute("pass", pass);
-
             response.sendRedirect("AdminHome.jsp");
-        }
-        else
+        }else{
             out.println("User Id or Password is not correct");
         RequestDispatcher pw=request.getRequestDispatcher("AdminLogin.jsp");
-        pw.include(request,response);
-               }catch(Exception e)
-                                             {
+        pw.include(request,response);}
+               }catch(Exception e)                                {
                    out.println(e.toString());
-               }
-                                       
+               }     
         %>
-    </body>
-</html>
+    </body> </html>

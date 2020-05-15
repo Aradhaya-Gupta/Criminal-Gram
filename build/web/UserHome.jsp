@@ -10,13 +10,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>User Home</title>
+            <style>
+body {
+  background-image: url('bharat.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+</style>
+
     </head>
     <body>
         <img src="3.jpg" style="width: 100%; height:150px"/>
         <table style="width: 100%; border-style: solid; background-color: bisque">
             <tr>
                 <td><a href="FileComplaint.jsp">File Complaint</a></td>
-                <td><a href="ComplainStatus.jsp" target="work">Complaint Status</a></td>
+                <td><a href="ComplaintStatus.jsp" target="work">Complaint Status</a></td>
                 <td><a href="ChangePassword_User.jsp">Change Password</a></td>
                 <td><a href="SignOut_Admin.jsp">Sign Out</td>
                 

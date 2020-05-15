@@ -1,4 +1,4 @@
-0<%-- 
+<%-- 
     Document   : AdminLoginPage
     Created on : Nov 29, 2016, 4:46:19 PM
     Author     : Aradhaya Gupta
@@ -9,31 +9,36 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User Registeration</title>
+        <title>File Complaint</title>
         <style>
             input{
-                background-color: aqua;
+                background-color: yellow;
                 text-align: center;
                 text-decoration: blink;
             }
+                
+body {
+  background-image: url('help.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
         </style>
     </head>
     <body><center>
 
         
-        <form action="ComplaintRegistered.jsp" enctype="multipart/form-data" method="POST">
+        <form action="ComplaintRegistered.jsp" method="POST">
             <h3>Complaint Registration Page</h3>
-            <table style="border-style: solid; border-color: blue; background-color: blanchedalmond">
-                <tr><td>Suspect Name</td><td><input type="text" name="suspect" placeholder="IF KNOWN"/></td></tr>
-                 <tr><td>City</td><td><input type="text" name="city" placeholder="City"/></td></tr>
-                <tr><td>Subject</td><td><input type="text" name="subject" placeholder="MANDATORY"/></td></tr>
-                <tr> <td>Description</td><td><input type="text" name="description" placeholder="MANDATORY" /></td></tr>
-                 <tr><td>Phone Number</td><td><input type="text" name="phonenumber"/></td></tr>
-                  <tr><td>Photo</td><td><input type="file" name="file" size="50" /></td></tr>
-              
+            <table style="border-style: solid; border-color: blue; background-color: fuchsia">
+                <tr><td>Suspect Name</td><td><input type="text" name="suspect1" placeholder="IF KNOWN"/></td></tr>
+                <tr><td>Subject</td><td><input type="text" name="subject1" placeholder="MANDATORY"/></td></tr>
+                <tr> <td>Description</td><td><input type="textarea" name="description1" placeholder="MANDATORY" /></td></tr>
+                 <tr><td>Phone Number</td><td><input type="text" name="phonenumber1"/></td></tr>
+                   <tr>
     <td>City</td>
-<td> <select name=city id="city" placeholder="City">
-<option>MANDATORY</option>
+<td> <select name="city11" id="city11" placeholder="City">
+<option>Options</option>
 <option>Ambala</option>
 <option>Kaithal</option>
 <option>Kurukshetra</option>
@@ -47,8 +52,12 @@
 </select>
 </td>
 </tr>
+                 
+              
+   
                 <tr><td colspan="2"><input type="Submit" value="Submit"/></td></tr>
             </table>
+            
             
             
         </form>

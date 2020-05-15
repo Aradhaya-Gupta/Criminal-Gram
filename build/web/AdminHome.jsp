@@ -10,6 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Home</title>
+            <style>
+body {
+  background-image: url('modi.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+</style>
+
     </head>
     <body>
         <img src="3.jpg" style="width: 100%; height:150px"/>
@@ -18,6 +26,7 @@
                 <td><a href="JailorRegistration.jsp" target="work">Register Jailor</a></td>
                 <td><a href="RemoveJailor.jsp" target="work">Remove Jailor</a></td>
                 <td><a href="ChangePassword_Admin.jsp">Change Password</a></td>
+                <td><a href="CriminalsAdmin.jsp">Criminals information</a></td>>
                 <td><a href="SignOut_Admin.jsp">Sign Out</td>
               
                 

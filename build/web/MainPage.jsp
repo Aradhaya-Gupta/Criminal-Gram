@@ -9,10 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin Home</title>
+        <title>Public Home</title>
+        <style> body { background-image: url("modi.jpg"); background-repeat: no-repeat; background-size:100%; } </style>
     </head>
-    <body>
-        <img src="3.jpg" style="width: 100%; height:150px"/>
+        <body >
+    <img src="3.jpg" style="width: 100%; height:150px"/>
         <table style="width: 100%; border-style: solid; background-color: bisque">
             <tr>
                 <td><a href="UserRegisteration.jsp">User Registration</a></td>
